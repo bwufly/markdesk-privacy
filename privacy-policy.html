@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkDesk 隐私政策</title>
+  <style>
+    :root {
+      --paper: #f5f0e8;
+      --paper-dark: #e8e0d0;
+      --ink: #2c2416;
+      --ink-light: #6b5d4f;
+      --ink-muted: #8e816f;
+      --accent: #c0392b;
+      --border: #c9b99a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Serif SC", "Source Serif Pro", Georgia, serif;
+      color: var(--ink);
+      background:
+        repeating-linear-gradient(
+          0deg,
+          var(--paper),
+          var(--paper) 31px,
+          var(--paper-dark) 31px,
+          var(--paper-dark) 32px
+        );
+      line-height: 1.75;
+    }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .card {
+      background: rgba(245, 240, 232, 0.96);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(44, 36, 22, 0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 36px 36px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0 12px;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--ink-light);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 32px 36px 40px;
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0 16px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: rgba(232, 224, 208, 0.65);
+      color: var(--ink-light);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    code {
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(212, 197, 169, 0.45);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.92em;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 14px 40px;
+      }
+
+      .hero,
+      .content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="card">
+      <header class="hero">
+        <div class="eyebrow">MarkDesk</div>
+        <h1>隐私政策</h1>
+        <p class="subtitle">MarkDesk 用于同步和整理 Chrome 书签，并在本地建立索引，以支持标签、搜索和可选网页摘要功能。</p>
+        <div class="meta">
+          <span>生效日期：2026-03-31</span>
+          <span>适用产品：MarkDesk Chrome 扩展</span>
+        </div>
+      </header>
+
+      <section class="content">
+        <p>本隐私政策说明 MarkDesk 会处理哪些数据、这些数据的用途、存储方式，以及用户可以如何控制这些数据。</p>
+
+        <h2>1. 我们处理哪些数据</h2>
+        <ul>
+          <li>用户的书签标题、URL、父级目录和所属域名。</li>
+          <li>用户为书签编辑或确认的标签信息。</li>
+          <li>用户主动触发摘要功能时，目标网页中提取的文本内容。</li>
+          <li>用户在设置页面填写的 AI 配置，例如 <code>endpoint</code>、<code>model</code> 和 <code>apiKey</code>。</li>
+        </ul>
+
+        <h2>2. 这些数据的用途</h2>
+        <ul>
+          <li>同步和展示浏览器书签。</li>
+          <li>在本地生成标签、摘要和搜索索引，帮助用户更快管理收藏内容。</li>
+          <li>在用户主动启用 AI 摘要后，将网页文本发送到用户指定的 AI 服务生成摘要。</li>
+        </ul>
+
+        <h2>3. 数据存储方式</h2>
+        <p>MarkDesk 默认将书签索引、标签、摘要和设置保存在用户本地浏览器存储中，例如 IndexedDB 和 Chrome 本地存储。</p>
+
+        <div class="note">
+          除非用户主动启用 AI 摘要并填写第三方接口配置，否则 MarkDesk 不会将网页内容发送到任何外部服务。
+        </div>
+
+        <h2>4. 数据共享与第三方服务</h2>
+        <ul>
+          <li>MarkDesk 不会将用户数据上传到开发者自有服务器。</li>
+          <li>如果用户启用了 AI 摘要功能，网页文本会发送到用户自行配置的第三方 AI 服务，处理规则以该服务提供方的隐私政策为准。</li>
+          <li>MarkDesk 不会出售用户数据，也不会将用户数据用于广告投放、信用评估或与扩展核心功能无关的用途。</li>
+        </ul>
+
+        <h2>5. 用户控制权</h2>
+        <ul>
+          <li>用户可以随时删除本地保存的书签数据和摘要。</li>
+          <li>用户可以编辑或删除任意标签。</li>
+          <li>用户可以随时关闭 AI 摘要功能，或清除 AI 接口配置。</li>
+          <li>用户可以卸载扩展，停止后续数据处理。</li>
+        </ul>
+
+        <h2>6. 权限说明</h2>
+        <ul>
+          <li><code>bookmarks</code>：用于读取和同步用户书签。</li>
+          <li><code>storage</code>：用于在本地保存索引、标签、摘要和设置。</li>
+          <li><code>&lt;all_urls&gt;</code>：仅在用户触发摘要功能时，用于访问目标网页并提取文本内容。</li>
+        </ul>
+
+        <h2>7. 联系方式</h2>
+        <p>如果你对本隐私政策有任何问题，可以通过以下方式联系开发者：</p>
+        <p>邮箱：<a href="mailto:wfxykzd@gmail.com">wfxykzd@gmail.com</a></p>
+
+        <h2>8. 政策更新</h2>
+        <p>如果 MarkDesk 的数据处理方式发生变化，本页面会同步更新，并以页面顶部标注的生效日期为准。</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
