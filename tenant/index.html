@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+  <html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>租户切换助手 - 隐私政策</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --primary: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .container {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 48px 20px 72px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      h1 {
+        font-size: 34px;
+        margin: 0 0 12px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      p, li {
+        font-size: 16px;
+        color: var(--text);
+      }
+
+      .meta {
+        color: var(--muted);
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+
+      .lead {
+        font-size: 17px;
+        color: var(--muted);
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      code {
+        background: #eff6ff;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>隐私政策</h1>
+        <p class="meta">最后更新日期：2026-04-03</p>
+
+        <p class="lead">
+          欢迎使用 <strong>租户切换助手</strong>（以下简称“本扩展”）。
+          本隐私政策用于说明本扩展如何处理信息、使用权限以及保护用户隐私。
+        </p>
+
+        <h2>1. 扩展用途</h2>
+        <p>
+          租户切换助手是一个用于多租户系统调试、测试和联调的 Chrome 扩展。
+        </p>
+        <p>
+          本扩展允许用户在扩展弹窗中保存多个租户配置，并在需要时将当前活动网页中的指定
+          <code>localStorage</code> 键值更新为目标值，然后自动刷新页面，使对应租户配置立即生效。
+        </p>
+        <p>
+          本扩展仅用于与上述功能直接相关的用途，不提供与此无关的功能。
+        </p>
+
+        <h2>2. 我们收集哪些信息</h2>
+        <p>
+          本扩展不会收集、上传或共享用户的个人信息。
+          本扩展当前版本不会将数据发送到任何远程服务器。
+        </p>
+        <p>本扩展仅在用户本地浏览器中保存以下信息：</p>
+        <ul>
+          <li>用户手动创建的租户配置</li>
+          <li>租户名称</li>
+          <li>localStorage Key</li>
+          <li>localStorage Value</li>
+          <li>当前选中的租户状态</li>
+        </ul>
+        <p>
+          上述信息仅保存在浏览器本地存储中，用于实现扩展核心功能。
+        </p>
+
+        <h2>3. 我们如何使用这些信息</h2>
+        <p>本扩展仅将本地存储的信息用于以下目的：</p>
+        <ul>
+          <li>在扩展弹窗中展示租户配置列表</li>
+          <li>支持新增、编辑、删除租户配置</li>
+          <li>在用户主动点击“切换”时，将配置写入当前活动页面的 <code>localStorage</code></li>
+          <li>在切换完成后自动刷新页面，以便配置立即生效</li>
+        </ul>
+        <p>
+          本扩展不会将这些信息用于广告、用户画像、行为分析或其他与核心功能无关的用途。
+        </p>
+
+        <h2>4. 权限说明</h2>
+        <p>为了实现扩展核心功能，本扩展会使用以下 Chrome 权限：</p>
+        <ul>
+          <li><strong>storage</strong>：用于在浏览器本地保存租户配置和当前租户状态。</li>
+          <li><strong>activeTab</strong>：用于在用户主动点击扩展时访问当前活动标签页，以便对该页面执行租户切换操作。</li>
+          <li><strong>scripting</strong>：用于在当前活动页面执行扩展脚本，将用户配置的 <code>localStorage</code>
+  键值写入页面环境，并在完成后刷新页面。</li>
+        </ul>
+        <p>
+          本扩展仅在用户主动操作时使用这些权限，不会在后台持续访问网页内容。
+        </p>
+
+        <h2>5. 数据共享与披露</h2>
+        <p>
+          本扩展不会出售、出租或共享用户数据。
+        </p>
+        <p>
+          本扩展不会将任何数据发送给第三方，不会用于广告或营销，也不会用于与扩展核心功能无关的目的。
+        </p>
+        <p>
+          除非法律法规要求，否则我们不会披露用户通过本扩展保存的任何信息。
+        </p>
+
+        <h2>6. 数据存储与安全</h2>
+        <p>
+          本扩展当前版本仅使用浏览器本地存储保存配置，不依赖远程数据库或云端服务。
+        </p>
+        <p>用户可以随时通过以下方式管理或删除数据：</p>
+        <ul>
+          <li>在扩展中删除租户配置</li>
+          <li>卸载扩展</li>
+          <li>清除浏览器扩展本地存储数据</li>
+        </ul>
+
+        <h2>7. 第三方服务</h2>
+        <p>
+          本扩展当前版本不集成任何第三方分析、广告或远程 API 服务。
+        </p>
+        <p>
+          如未来版本引入新的第三方服务或远程数据传输能力，我们将更新本隐私政策并明确说明相关信息处理方式。
+        </p>
+
+        <h2>8. 儿童隐私</h2>
+        <p>
+          本扩展不是面向儿童设计的产品，也不会主动收集儿童个人信息。
+        </p>
+
+        <h2>9. 隐私政策更新</h2>
+        <p>
+          我们可能会根据扩展功能变化、法律法规要求或合规需要更新本隐私政策。
+          如有重大变更，我们将通过更新本页面内容的方式进行说明。
+        </p>
+
+        <h2>10. 联系方式</h2>
+        <p>如果你对本隐私政策有任何疑问，可以通过以下方式联系：</p>
+        <ul>
+          <li>GitHub 仓库：<a href="https://github.com/bwufly/markdesk-privacy" 
+  target="_blank">https://github.com/bwufly/markdesk-privacy</a></li>
+          <li>联系邮箱：<a href="mailto:your-email@example.com">your-email@example.com</a></li>
+        </ul>
+
+        <div class="footer">
+          请将 <strong>your-email@example.com</strong> 替换为你的真实联系邮箱。
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
+
+  ---
+  你要改的只有两点
+
+  1. 文件名改成：
+  index.html
+
+  2. 把这里：
+  your-email@example.com
+  换成你的真实邮箱
+
+  ---
+  提交信息建议
+
+  commit message 用这个：
+
+  Add privacy policy page for Tenant Switch Helper
+
+  ---
+  提交后
+
+  去仓库：
+  Settings → Pages
+
+  选择：
+  - Source: Deploy from a branch
+  - Branch: main
+  - Folder: / (root)
